@@ -1,66 +1,66 @@
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 
 const config = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.resolve(__dirname, "dist"),
+    filename: "bundle.js",
+  },
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "dist"),
+    },
+    compress: true,
+    port: 9000,
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
+        use: "babel-loader",
+        exclude: /node_modules/,
+      },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+        exclude: /\.module\.css$/,
       },
       {
         test: /\.css$/,
         use: [
-          'style-loader',
-          'css-loader'
-        ],
-        exclude: /\.module\.css$/
-      },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
+          "style-loader",
           {
-            loader: 'css-loader',
+            loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true
-            }
-          }
+              modules: true,
+            },
+          },
         ],
-        include: /\.module\.css$/
+        include: /\.module\.css$/,
       },
       {
         test: /\.scss$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'sass-loader'
-        ]
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
         test: /\.svg$/,
-        use: 'file-loader'
+        use: "file-loader",
       },
       {
         test: /\.png$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: "url-loader",
             options: {
-              mimetype: 'image/png'
-            }
-          }
-        ]
-      }
-    ]
-  }
+              mimetype: "image/png",
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
 
 module.exports = config;
