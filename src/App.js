@@ -5,10 +5,8 @@ import { createContext, useState } from "react";
 function App() {
   return (
     <>
-      <h1>
-        Hello
-        <Hello></Hello>
-      </h1>
+      <h1>Hello</h1>
+      <Hello></Hello>
     </>
   );
 }
