@@ -1,5 +1,43 @@
+:root {
+  --font-family: "PT Sans Caption", sans-serif;
+  --second-family: "Ubuntu", sans-serif;
+  --midle-green: #1fa181;
+  --light-green: #0dbc91;
+  --dark-green: #08664f;
+  --gray: #f8fbfa;
+  --text: #364844;
+  --gray-text: #868686;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
   padding: 0;
+
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-caption-regular {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-caption-bold {
+  font-family: "PT Sans Caption", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }

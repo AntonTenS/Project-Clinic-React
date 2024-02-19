@@ -22,7 +22,6 @@ function App() {
   return (
     <>
       <AuthContext.Provider value={Text}>
-        <h1>Hello</h1>
         <Header />
       </AuthContext.Provider>
     </>
