@@ -1,0 +1,44 @@
+.textcity {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--text);
+  height: 17px;
+}
+.textplace {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: var(--gray-text);
+}
+
+.blockflexrow {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  padding-top: 4px;
+}
+.blockflexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+.img {
+  width: 20px;
+  height: 20px;
+}
+
+@media all and (max-width: 710px) {
+  .img,
+  .textplace {
+    display: none;
+  }
+  .textcity {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 13px;
+    text-align: right;
+    color: #364844;
+  }
+}

@@ -16,13 +16,19 @@ function Header() {
     return <div>Загрузка текста...</div>;
   }
   return (
-    <BlockHeader>
-      <Burger></Burger>
-      <Logo />
-      <Addres></Addres>
-      <NumberWhatsapp></NumberWhatsapp>
-      <ButtonHeader></ButtonHeader>
-    </BlockHeader>
+    <div className={style.conteiner}>
+      <BlockHeader>
+        <div className={style.left}>
+          <Burger></Burger>
+          <Logo />
+          <Addres></Addres>
+        </div>
+        <div className={style.right}>
+          <NumberWhatsapp></NumberWhatsapp>
+          <ButtonHeader></ButtonHeader>
+        </div>
+      </BlockHeader>
+    </div>
   );
 }
 

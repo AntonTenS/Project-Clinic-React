@@ -1,0 +1,30 @@
+.number {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #364844;
+}
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.img {
+  width: 28px;
+  height: 28px;
+}
+@media all and (max-width: 710px) {
+  .img {
+    display: none;
+  }
+  .number {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 16px;
+    text-align: right;
+    color: #364844;
+  }
+}

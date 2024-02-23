@@ -22,7 +22,7 @@
   height: 4px;
 }
 
-@media all and (max-width: 800px) {
+@media all and (max-width: 710px) {
   .burger {
     display: flex;
   }

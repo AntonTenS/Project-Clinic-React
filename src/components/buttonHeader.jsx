@@ -8,7 +8,9 @@ export function ButtonHeader() {
 
   return (
     <div>
-      <button type="button">{get.header.button}</button>
+      <button type="button" className={style.text}>
+        {get.header.button}
+      </button>
     </div>
   );
 }

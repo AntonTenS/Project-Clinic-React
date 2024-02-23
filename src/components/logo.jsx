@@ -4,7 +4,7 @@ import img from "../images/logoHeader.svg";
 
 export function Logo() {
   return (
-    <div>
+    <div className={style.block}>
       <img src={img} alt="logo" />
     </div>
   );

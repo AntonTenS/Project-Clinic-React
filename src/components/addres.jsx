@@ -8,10 +8,12 @@ export function Addres() {
   let get = useContext(AuthContext);
 
   return (
-    <div>
-      <img src={img} alt="place" />
-      <p>{get.header.city}</p>
-      <p>{get.header.addres}</p>
+    <div className={style.blockflexrow}>
+      <img src={img} className={style.img} alt="place" />
+      <div className={style.blockflexcolumn}>
+        <p className={style.textcity}>{get.header.city}</p>
+        <p className={style.textplace}>{get.header.addres}</p>
+      </div>
     </div>
   );
 }

@@ -1,0 +1,20 @@
+.text {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  color: #fff;
+  height: 43px;
+  width: 196px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--light-green);
+}
+.text:hover {
+  background-color: var(--green-hover);
+}
+@media all and (max-width: 710px) {
+  .text {
+    display: none;
+  }
+}

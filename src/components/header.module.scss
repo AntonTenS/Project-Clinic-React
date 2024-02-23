@@ -5,3 +5,22 @@
   line-height: 150%;
   color: #868686;
 }
+.left {
+  display: flex;
+  flex-direction: row;
+  gap: 22px;
+}
+.right {
+  display: flex;
+  flex-direction: row;
+  gap: 35px;
+}
+.conteiner {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 1172px;
+}
+@media screen and (max-width: 710px) {
+  .conteiner {
+  }
+}
