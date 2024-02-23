@@ -29,11 +29,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <AuthContext.Provider value={Text}>
-        <Header />
-      </AuthContext.Provider>
-    </>
+    <AuthContext.Provider value={Text}>
+      <Header />
+    </AuthContext.Provider>
   );
 }
 

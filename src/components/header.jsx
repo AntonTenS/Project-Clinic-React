@@ -3,6 +3,12 @@ import React from "react";
 import { useContext } from "react";
 import { AuthContext } from "../context";
 import { BlockHeader } from "./blockHeader.jsx";
+import { Burger } from "./burger.jsx";
+import { Logo } from "./logo.jsx";
+import { Addres } from "./addres.jsx";
+import { NumberWhatsapp } from "./numberWhatsapp.jsx";
+import { ButtonHeader } from "./buttonHeader.jsx";
+
 function Header() {
   const get = useContext(AuthContext);
 
@@ -11,26 +17,11 @@ function Header() {
   }
   return (
     <BlockHeader>
-      <div className="burger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div>
-        <img src="" alt="logo" />
-      </div>
-      <div>
-        <img src="" alt="place" />
-        <p className="addres"></p>
-        <p className="addres"></p>
-      </div>
-      <div>
-        <img src="" alt="whatsapp" />
-        <p className="phone"></p>
-      </div>
-      <div>
-        <button type="button"></button>
-      </div>
+      <Burger></Burger>
+      <Logo />
+      <Addres></Addres>
+      <NumberWhatsapp></NumberWhatsapp>
+      <ButtonHeader></ButtonHeader>
     </BlockHeader>
   );
 }
