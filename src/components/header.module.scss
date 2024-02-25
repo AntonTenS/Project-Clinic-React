@@ -20,7 +20,59 @@
   padding: 0 1rem;
   max-width: 1172px;
 }
+.mobile {
+  display: none;
+}
+.desktop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+.leftmobile {
+  display: flex;
+  flex-direction: row;
+  padding-top: 8px;
+  gap: 44px;
+}
+.rightmobile {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3px;
+  padding-top: 2px;
+}
+.textphone {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: right;
+  color: #364844;
+}
+.textcity {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  text-align: right;
+  color: #364844;
+}
+
 @media screen and (max-width: 710px) {
   .conteiner {
+  }
+  .mobile {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .desktop {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .leftmobile {
+    gap: 26px;
   }
 }
