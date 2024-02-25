@@ -42,27 +42,30 @@ function Header() {
           </div>
         </BlockHeader>
       </div>
-      <div className={style.bggreen}>
-        <div className={style.conteiner}>
-          <nav className={style.navbar}>
-            <ol className={style.navbarOl}>
-              <li>
-                <a href="#">{get.navbar.about}</a>
-              </li>
-              <li>
-                <a href="#">{get.navbar.services}</a>
-              </li>
-              <li>
-                <a href="#">{get.navbar.specialists}</a>
-              </li>
-              <li>
-                <a href="#">{get.navbar.prices}</a>
-              </li>
-              <li>
-                <a href="#">{get.navbar.contacts}</a>
-              </li>
-            </ol>
-          </nav>
+      <div className={style.reletive}>
+        <div className={style.bggreen}>
+          <div className={style.conteiner}>
+            <nav className={style.navbar}>
+              <ol className={style.navbarOl}>
+                <li>
+                  <a href="#">{get.navbar.about}</a>
+                </li>
+                <li>
+                  <a href="#">{get.navbar.services}</a>
+                </li>
+                <li>
+                  <a href="#">{get.navbar.specialists}</a>
+                </li>
+                <li>
+                  <a href="#">{get.navbar.prices}</a>
+                </li>
+                <li>
+                  <a href="#">{get.navbar.contacts}</a>
+                </li>
+              </ol>
+              <button className={style.button}>{get.header.button}</button>
+            </nav>
+          </div>
         </div>
       </div>
     </div>
