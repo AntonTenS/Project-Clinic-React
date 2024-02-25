@@ -9,6 +9,7 @@ import { Addres } from "./addres.jsx";
 import { NumberWhatsapp } from "./numberWhatsapp.jsx";
 import { ButtonHeader } from "./buttonHeader.jsx";
 import { Logomobile } from "./logomobile.jsx";
+import { HeaderMobileRightBlock } from "./headerMobileRightBlock.jsx";
 
 function Header() {
   const get = useContext(AuthContext);
@@ -17,31 +18,53 @@ function Header() {
     return <div>Загрузка текста...</div>;
   }
   return (
-    <div className={style.conteiner}>
-      <BlockHeader>
-        <div className={style.mobile}>
-          <div className={style.leftmobile}>
-            <Burger></Burger>
-            <Logomobile></Logomobile>
-          </div>
-          <div className={style.rightmobile}>
-            <div className={style.flexcolumn}>
-              <p className={style.textphone}>{get.header.phone}</p>
-              <p className={style.textcity}>{get.header.city}</p>
+    <div>
+      <div className={style.conteiner}>
+        <BlockHeader>
+          <div className={style.mobile}>
+            <div className={style.leftmobile}>
+              <Burger></Burger>
+              <Logomobile></Logomobile>
+            </div>
+            <div className={style.rightmobile}>
+              <HeaderMobileRightBlock></HeaderMobileRightBlock>
             </div>
           </div>
-        </div>
-        <div className={style.desktop}>
-          <div className={style.left}>
-            <Logo />
-            <Addres></Addres>
+          <div className={style.desktop}>
+            <div className={style.left}>
+              <Logo />
+              <Addres></Addres>
+            </div>
+            <div className={style.right}>
+              <NumberWhatsapp></NumberWhatsapp>
+              <ButtonHeader></ButtonHeader>
+            </div>
           </div>
-          <div className={style.right}>
-            <NumberWhatsapp></NumberWhatsapp>
-            <ButtonHeader></ButtonHeader>
-          </div>
+        </BlockHeader>
+      </div>
+      <div className={style.bggreen}>
+        <div className={style.conteiner}>
+          <nav className={style.navbar}>
+            <ol className={style.navbarOl}>
+              <li>
+                <a href="#">{get.navbar.about}</a>
+              </li>
+              <li>
+                <a href="#">{get.navbar.services}</a>
+              </li>
+              <li>
+                <a href="#">{get.navbar.specialists}</a>
+              </li>
+              <li>
+                <a href="#">{get.navbar.prices}</a>
+              </li>
+              <li>
+                <a href="#">{get.navbar.contacts}</a>
+              </li>
+            </ol>
+          </nav>
         </div>
-      </BlockHeader>
+      </div>
     </div>
   );
 }

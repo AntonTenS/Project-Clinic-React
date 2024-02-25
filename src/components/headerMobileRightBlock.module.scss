@@ -1,0 +1,18 @@
+.textphone {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 16px;
+  text-align: right;
+  color: #364844;
+}
+.textcity {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 13px;
+  text-align: right;
+  color: #364844;
+}
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}

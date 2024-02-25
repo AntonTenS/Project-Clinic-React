@@ -28,10 +28,7 @@
   justify-content: space-between;
   width: 100%;
 }
-.flexcolumn {
-  display: flex;
-  flex-direction: column;
-}
+
 .leftmobile {
   display: flex;
   flex-direction: row;
@@ -44,20 +41,35 @@
   padding-right: 3px;
   padding-top: 2px;
 }
-.textphone {
-  font-family: var(--font-family);
-  font-weight: 700;
-  font-size: 16px;
-  text-align: right;
-  color: #364844;
+
+//=====================================================================
+.bggreen {
+  width: 100%;
+  background-color: var(--midle-green);
+  padding: 10px 0 9px;
 }
-.textcity {
+.navbar {
+  text-decoration: none;
+  list-style-type: none;
+}
+li {
+  list-style-type: none;
+}
+a {
   font-family: var(--font-family);
   font-weight: 400;
-  font-size: 13px;
-  text-align: right;
-  color: #364844;
+  font-size: 16px;
+  line-height: 150%;
+  color: #fff;
+  text-decoration: none;
 }
+.navbarOl {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+//=====================================================================
 
 @media screen and (max-width: 710px) {
   .conteiner {
