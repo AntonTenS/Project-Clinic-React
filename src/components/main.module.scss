@@ -1,0 +1,38 @@
+.flexrow {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.left {
+  width: 51%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: var(--gray);
+}
+
+.flexcenter {
+  max-width: 416px;
+}
+
+.right {
+  //width: 950px;
+}
+.con {
+  width: 100%;
+}
+
+h1 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  color: var(--text);
+}
+p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--text);
+}

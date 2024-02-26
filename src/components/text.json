@@ -11,5 +11,9 @@
     "specialists": "Специалисты",
     "prices": "Цены",
     "contacts": "Контакты"
+  },
+  "main": {
+    "title": "Многопрофильная клиника для детей и взрослых",
+    "discription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
   }
 }

@@ -45,7 +45,7 @@ const config = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|jpe?g)$/,
         use: "file-loader",
       },
       {
