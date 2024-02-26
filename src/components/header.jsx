@@ -1,6 +1,6 @@
 import style from "./header.module.scss";
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context";
 import { BlockHeader } from "./blockHeader.jsx";
 import { Burger } from "./burger.jsx";
@@ -13,6 +13,12 @@ import { HeaderMobileRightBlock } from "./headerMobileRightBlock.jsx";
 
 function Header() {
   const get = useContext(AuthContext);
+  const [burgerbool, setBurgerbool] = useState(false);
+
+  const changeBurger = () => {
+    setBurgerbool(!burgerbool);
+    console.log(burgerbool);
+  };
 
   if (!get) {
     return <div>Загрузка текста...</div>;
@@ -23,7 +29,7 @@ function Header() {
         <BlockHeader>
           <div className={style.mobile}>
             <div className={style.leftmobile}>
-              <Burger></Burger>
+              <Burger forClick={changeBurger} burgerbool={burgerbool}></Burger>
               <Logomobile></Logomobile>
             </div>
             <div className={style.rightmobile}>
@@ -43,7 +49,7 @@ function Header() {
         </BlockHeader>
       </div>
       <div className={style.reletive}>
-        <div className={style.bggreen}>
+        <div className={burgerbool ? style.bggreen : style.bggreentrue}>
           <div className={style.conteiner}>
             <nav className={style.navbar}>
               <ol className={style.navbarOl}>

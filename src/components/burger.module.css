@@ -5,21 +5,56 @@
   align-items: center;
   height: 26px;
   width: 37px;
+  transition: all 1s ease;
 }
 .top {
   background: var(--midle-green);
   width: 100%;
   height: 4px;
+  transition: all 1s ease;
+  position: relative;
+  top: 0px;
 }
 .middle {
   background: var(--midle-green);
   width: 100%;
   height: 4px;
+  transition: all 1s ease;
+  opacity: 1;
 }
 .bottom {
   background: var(--midle-green);
   width: 100%;
   height: 4px;
+  transition: all 1s ease;
+  position: relative;
+  top: 0px;
+}
+
+.toptrue {
+  background: var(--midle-green);
+  width: 100%;
+  height: 4px;
+  transform: rotate(45deg);
+  position: relative;
+  top: 11px;
+  transition: all 1s ease;
+}
+
+.middletrue {
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.bottomtrue {
+  background: var(--midle-green);
+  width: 100%;
+  height: 4px;
+  transform: rotate(-45deg);
+  position: relative;
+  top: -11px;
+  transition: all 1s ease;
 }
 
 @media all and (max-width: 710px) {
