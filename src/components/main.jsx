@@ -16,7 +16,7 @@ function Main() {
         <div className={style.left}>
           <div className={style.flexcenter}>
             <h1 className={style.h1}>{get.main.title}</h1>
-            <p>{get.main.discription}</p>
+            <p className={style.p}>{get.main.discription}</p>
           </div>
         </div>
         <div className={style.right}>

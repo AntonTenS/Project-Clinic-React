@@ -1,6 +1,7 @@
 import json from "./text.json";
 import Header from "./header.jsx";
 import Main from "./main.jsx";
+import Faq from "./faq.jsx";
 import React from "react";
 import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
@@ -33,6 +34,7 @@ function App() {
     <AuthContext.Provider value={Text}>
       <Header />
       <Main />
+      <Faq />
     </AuthContext.Provider>
   );
 }
