@@ -15,12 +15,12 @@ function Main() {
       <div className={style.flexrow}>
         <div className={style.left}>
           <div className={style.flexcenter}>
-            <h1>{get.main.title}</h1>
+            <h1 className={style.h1}>{get.main.title}</h1>
             <p>{get.main.discription}</p>
           </div>
         </div>
         <div className={style.right}>
-          <img src={img} alt="mainImage" />
+          <img className={style.img} src={img} alt="mainImage" />
         </div>
       </div>
     </div>
