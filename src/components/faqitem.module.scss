@@ -1,0 +1,129 @@
+.block {
+  display: flex;
+  flex-direction: row;
+  max-width: 1140px;
+  background: #f8fbfa;
+  border-radius: 5px;
+  padding: 40px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.question {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  color: #364844;
+}
+.answer {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #364844;
+  animation: hideAnimation 1s forwards;
+}
+.noanswer {
+  display: none;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 94%;
+}
+.right {
+}
+.plus {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: block;
+  animation: hideAnimation 1s forwards;
+}
+.vertical {
+  height: 100%;
+  width: 2px;
+  background: var(--light-green);
+  position: absolute;
+  right: 11px;
+}
+.novertical {
+  display: none;
+}
+.gorizontal {
+  width: 100%;
+  position: absolute;
+  top: 11px;
+  background: var(--light-green);
+  height: 2px;
+}
+.paddingX {
+  padding: 0;
+  width: 100%;
+  max-width: 1140px;
+}
+
+@media screen and (max-width: 710px) {
+  .plus {
+    display: none;
+  }
+
+  .answer {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #364844;
+    display: block;
+    animation: hideAnimation 1s forwards;
+  }
+  .noanswer {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #364844;
+    display: block;
+    animation: hideAnimation 1s forwards;
+  }
+  .question {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    color: #364844;
+  }
+  .paddingX {
+    padding: 0 1rem;
+  }
+  .block {
+    display: flex;
+    flex-direction: row;
+    max-width: 1140px;
+    background: #f8fbfa;
+    border-radius: 5px;
+    padding: 1% 4% 2.6%;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .left {
+    width: 100%;
+  }
+}
+@keyframes hideAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+@keyframes nohideAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}

@@ -4,7 +4,29 @@
 .flex {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 24px;
 }
-.block {
-  max-width: 1140px;
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 36px;
+  color: #364844;
+  padding: 100px 0 16px;
+}
+.paddingX {
+  padding: 0;
+}
+@media screen and (max-width: 710px) {
+  .title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    color: #364844;
+    padding: 10% 0 16px;
+  }
+  .paddingX {
+    padding: 0 1rem;
+  }
 }
