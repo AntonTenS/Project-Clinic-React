@@ -16,13 +16,17 @@ export function Faqitem({ object, index }) {
   };
   return (
     <div className={style.paddingX}>
-      <div className={style.block} key={index}>
+      <div className={style.block} key={index} onClick={Swith}>
         <div className={style.left}>
           <p className={style.question}>{get.faq.faqs[object].question}</p>
-          <p className={toggle ? style.answer : style.noanswer}>{get.faq.faqs[object].answer}</p>
+          {Object.keys(get.faq.faqs[object].answer).map((key, index) => (
+            <p key={index} className={toggle ? style.answer : style.noanswer}>
+              {get.faq.faqs[object].answer[key]}
+            </p>
+          ))}
         </div>
         <div className={style.right}>
-          <div className={style.plus} onClick={Swith}>
+          <div className={style.plus}>
             <span className={toggle ? style.novertical : style.vertical}></span>
             <span className={style.gorizontal}></span>
           </div>
