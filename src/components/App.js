@@ -3,6 +3,7 @@ import Header from "./header.jsx";
 import Main from "./main.jsx";
 import Faq from "./faq.jsx";
 import React from "react";
+import Swipper from "./swipper.jsx";
 import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
 
@@ -35,6 +36,7 @@ function App() {
       <Header />
       <Main />
       <Faq />
+      <Swipper />
     </AuthContext.Provider>
   );
 }

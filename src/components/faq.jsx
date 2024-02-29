@@ -1,6 +1,6 @@
 import style from "./faq.module.scss";
 import React from "react";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../context";
 import { Faqitem } from "./faqitem.jsx";
 
@@ -17,7 +17,7 @@ function Faq() {
           <p className={style.title}>{get.faq.title}</p>
         </div>
         {Object.keys(get.faq.faqs).map((key, index) => (
-          <Faqitem object={key} index={index} />
+          <Faqitem key={index} object={key} index={index} />
         ))}
       </div>
     </div>
