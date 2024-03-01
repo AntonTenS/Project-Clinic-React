@@ -18,15 +18,15 @@ function Swipper() {
   if (!get) {
     return <div>Загрузка текста...</div>;
   }
-  const swiper = useSwiper();
+  //const swiper = useSwiper();
   return (
     <div className={style.con}>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        //navigation
-        navigation={{ nextEl: style.st, prevEl: style.st2 }}
+        navigation
+        // navigation={{ nextEl: style.st, prevEl: style.st2 }}
         pagination={{ clickable: true, type: "fraction" }}
         //onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
@@ -43,8 +43,6 @@ function Swipper() {
         <SwiperSlide>
           <div className={style.slide}></div>
         </SwiperSlide>
-        <button className={style.st}>pref</button>
-        <button className={style.st2}>next</button>
       </Swiper>
     </div>
   );

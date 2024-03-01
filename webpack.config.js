@@ -34,7 +34,10 @@ const config = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true,
+              //modules: true,
+              modules: {
+                localIdentName: "[name]__[local]--[hash:base64:5]",
+              },
             },
           },
         ],
@@ -44,20 +47,25 @@ const config = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+
+      // {
+      //   test: /\.(svg|jpe?g)$/,
+      //   use: "file-loader",
+      // },
+      // {
+      //   test: /\.png$/,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       options: {
+      //         mimetype: "image/png",
+      //       },
+      //     },
+      //   ],
+      // },
       {
-        test: /\.(svg|jpe?g)$/,
-        use: "file-loader",
-      },
-      {
-        test: /\.png$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              mimetype: "image/png",
-            },
-          },
-        ],
+        test: /\.(jpg|png|svg|gif)$/,
+        type: "asset/resource",
       },
     ],
   },

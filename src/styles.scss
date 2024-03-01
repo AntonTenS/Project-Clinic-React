@@ -49,3 +49,46 @@ img {
   font-weight: 400;
   font-style: normal;
 }
+.swiper-button-next::after {
+  display: none;
+}
+.swiper-button-prev::after {
+  display: none;
+}
+.swiper-button-next {
+  width: 34px;
+  height: 18px;
+  background-image: url("/src/images/arrowright.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  right: var(--swiper-navigation-sides-offset, 46%);
+  top: var(--swiper-navigation-top-offset, 99%);
+  z-index: 11;
+}
+.swiper-button-prev {
+  width: 34px;
+  height: 18px;
+  background-image: url("/src/images/arrowleft.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  left: var(--swiper-navigation-sides-offset, 46%);
+  top: var(--swiper-navigation-top-offset, 99%);
+  z-index: 11;
+}
+.swiper-button-prev:hover {
+  background-image: url("/src/images/arrowleftgreen.svg");
+}
+.swiper-button-next:hover {
+  background-image: url("/src/images/arrowrightgreen.svg");
+}
+.swiper-pagination-current {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #364844;
+}
+.swiper-pagination-fraction {
+  letter-spacing: -2px;
+}
