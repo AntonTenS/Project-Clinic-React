@@ -1,12 +1,13 @@
 .con {
-  height: 500px;
+  height: 100%;
   width: 100%;
 }
 
 .slide {
-  height: 500px;
-  width: 500px;
-  background: red;
+  max-width: 1140px;
+  height: 440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .st {
@@ -19,11 +20,94 @@
   height: 100px;
   background: green;
 }
-.prpo {
-  width: 100px;
-  height: 100px;
-  background-image: url("/src/images/logoHeader.svg");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: center;
+
+.flexmain {
+  display: flex;
+  flex-direction: row;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background: #e2f0ef;
+  padding: 53px 0 56px 63px;
+}
+.right {
+  width: 50%;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 38px;
+  text-transform: uppercase;
+  color: #364844;
+}
+.subtitle {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 22px;
+  color: #364844;
+}
+.ol {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: #364844;
+}
+.li {
+}
+.divcast {
+  display: flex;
+  flex-direction: row;
+}
+.casttext {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: #364844;
+}
+.castcurrent {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 20px;
+  color: #364844;
+}
+.castpast {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: line-through;
+  color: #868686;
+}
+.buttonleft {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  border-radius: 50px;
+  width: 196px;
+  height: 43px;
+  background: #0dbc91;
+  border: none;
+}
+.buttonright {
+  border: 1px solid #0dbc91;
+  border-radius: 50px;
+  width: 196px;
+  height: 43px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #0dbc91;
+}
+.conforbuttons {
+  display: flex;
+  flex-direction: row;
 }
