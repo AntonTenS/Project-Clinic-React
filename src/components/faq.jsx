@@ -11,7 +11,7 @@ function Faq() {
     return <div>Загрузка текста...</div>;
   }
   return (
-    <div className={style.conteiner}>
+    <div className={style.container}>
       <div className={style.flex}>
         <div className={style.paddingX}>
           <p className={style.title}>{get.faq.title}</p>

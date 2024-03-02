@@ -36,12 +36,12 @@ function Swipper() {
               <div className={style.left}>
                 <div className={style.title}>{get.checkup[1].title}</div>
                 <div className={style.subtitle}>{get.checkup[1].subtitle}</div>
-                <ol className={style.ol}>
+                <ul className={style.ul}>
                   <li className={style.li}>{get.checkup[1].list[1]}</li>
                   <li className={style.li}>{get.checkup[1].list[2]}</li>
                   <li className={style.li}>{get.checkup[1].list[3]}</li>
                   <li className={style.li}>{get.checkup[1].list[4]}</li>
-                </ol>
+                </ul>
                 <div className={style.divcast}>
                   <div className={style.casttext}>{get.checkup[1].casttext}</div>
                   <div className={style.castcurrent}>{get.checkup[1].castcurrent}</div>
@@ -53,7 +53,7 @@ function Swipper() {
                 </div>
               </div>
               <div className={style.right}>
-                <img src={img1} alt="img1" />
+                <img className={style.img} src={img1} alt="img1" />
               </div>
             </div>
           </div>
