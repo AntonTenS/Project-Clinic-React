@@ -18,6 +18,8 @@ function Swipper() {
     return <div>Загрузка текста...</div>;
   }
   const [swiper, setSwiper] = useState();
+  const [numbercount, setNumbercount] = useState(1);
+  const [length, setLength] = useState(Object.keys(get.checkup).length);
   return (
     <div className={style.con}>
       <Swiper
@@ -27,7 +29,7 @@ function Swipper() {
         slidesPerView={1}
         //navigation
         //navigation={{ nextEl: style.st, prevEl: style.st2 }}
-        pagination={{ clickable: true, type: "fraction" }}
+        //pagination={{ clickable: true, type: "fraction" }}
         //onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
@@ -68,22 +70,29 @@ function Swipper() {
         <SwiperSlide>
           <div className={style.slide}></div>
         </SwiperSlide>
-        <div className={style.st}></div>
       </Swiper>
-      <button
-        className={style.st3}
-        onClick={() => {
-          swiper.slidePrev();
-          console.log(swiper);
-        }}
-      ></button>
-      <button
-        className={style.st2}
-        onClick={() => {
-          swiper.slideNext();
-          console.log(swiper);
-        }}
-      ></button>
+      <div className={style.conbutton}>
+        <button
+          className={style.st3}
+          onClick={() => {
+            swiper.slidePrev();
+            setNumbercount(swiper.activeIndex + 1);
+            console.log(swiper.activeIndex);
+            console.log(swiper.slides.length);
+          }}
+        ></button>
+        <div className={style.counter}>
+          <span className={style.countertextbolt}>{numbercount}</span>/<span className={style.countertextlast}>{length}</span>
+        </div>
+        <button
+          className={style.st2}
+          onClick={() => {
+            swiper.slideNext();
+            setNumbercount(swiper.activeIndex + 1);
+            console.log(swiper);
+          }}
+        ></button>
+      </div>
     </div>
   );
 }

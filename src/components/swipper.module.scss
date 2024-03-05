@@ -9,7 +9,14 @@
   margin: 0 auto;
   width: 100%;
 }
-
+.conbutton {
+  margin-top: 41px;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
 .st {
   height: 70px;
 }
@@ -23,6 +30,9 @@
   background-color: transparent;
   border: none;
 }
+.st2:hover {
+  background-image: url("/src/images/arrowrightgreen.svg");
+}
 .st3 {
   width: 34px;
   height: 18px;
@@ -32,6 +42,9 @@
   background-position: center;
   background-color: transparent;
   border: none;
+}
+.st3:hover {
+  background-image: url("/src/images/arrowleftgreen.svg");
 }
 
 .flexmain {
@@ -217,4 +230,101 @@
 
   display: flex;
   flex-direction: row;
+  padding-right: 2px;
+}
+.countertextbolt {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  color: #364844;
+}
+
+.counter {
+  color: #c0c0c0;
+}
+
+@media screen and (max-width: 710px) {
+  .flexmain {
+    flex-direction: column-reverse;
+  }
+  .slide {
+    height: auto;
+    padding: 0 1rem;
+  }
+  .left {
+    width: 100%;
+    padding: 23px 2px 42px 24px;
+  }
+  .right {
+    width: 100%;
+  }
+  .img {
+    border-radius: 5px 5px 0px 0px;
+  }
+  .right::before {
+    display: none;
+  }
+  .title {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 26px;
+    text-transform: uppercase;
+    color: #364844;
+    margin-bottom: 5px;
+  }
+  .subtitle {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 14px;
+    color: #364844;
+    margin-bottom: 12px;
+  }
+  .ul {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 145%;
+    color: #364844;
+  }
+  .li {
+    margin-bottom: 8px;
+  }
+  .li::before {
+    align-items: baseline;
+  }
+  .casttext {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #364844;
+  }
+  .castcurrent {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: #364844;
+    margin-right: 9px;
+  }
+  .divcast {
+    margin-top: 7px;
+    margin-bottom: 28px;
+  }
+  .castpast {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #868686;
+  }
+  .conforbuttons {
+    gap: 6px;
+    padding-right: 38px;
+  }
+  .conbutton {
+    margin-top: 27px;
+  }
+}
+@media screen and (max-width: 376px) {
+  .right {
+    height: 169px;
+  }
 }
