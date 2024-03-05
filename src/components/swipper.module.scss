@@ -11,14 +11,27 @@
 }
 
 .st {
-  width: 100px;
-  height: 100px;
-  background: blue;
+  height: 70px;
 }
 .st2 {
-  width: 100px;
-  height: 100px;
-  background: green;
+  width: 34px;
+  height: 18px;
+  background-image: url("/src/images/arrowright.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+.st3 {
+  width: 34px;
+  height: 18px;
+  background-image: url("/src/images/arrowleft.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: transparent;
+  border: none;
 }
 
 .flexmain {
@@ -31,23 +44,37 @@
   flex-direction: column;
   width: 44.5%;
   background: #e2f0ef;
+  //background-image: url(../images/formswiper.jpg);
   padding: 53px 0 56px 63px;
   position: relative;
 }
-.left::after {
+// .left::after {
+//   content: "";
+//   position: absolute;
+//   top: 0px;
+//   right: -23.6%;
+//   width: 0;
+//   height: 0;
+//   border: 220px solid transparent;
+//   border-bottom: 220px solid #e2f0ef;
+//   border-left: 59px solid #e2f0ef;
+//   border-right: 59px solid transparent;
+// }
+.right {
+  width: 58%;
+  position: relative;
+}
+.right::before {
   content: "";
   position: absolute;
-  top: 0px;
-  right: -23.6%;
+  top: 0;
+  left: -1px;
   width: 0;
   height: 0;
   border: 220px solid transparent;
   border-bottom: 220px solid #e2f0ef;
   border-left: 59px solid #e2f0ef;
   border-right: 59px solid transparent;
-}
-.right {
-  width: 58%;
 }
 .img {
   object-fit: cover;
@@ -153,8 +180,27 @@
   height: 43px;
   background: #0dbc91;
   border: none;
+  cursor: pointer;
+}
+.buttonleft:hover {
+  background: var(--green-hover);
+}
+.buttonright:hover {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: center;
+  color: #fff;
+  border-radius: 50px;
+  width: 196px;
+  height: 43px;
+  background: var(--light-green);
+  border: none;
 }
 .buttonright {
+  cursor: pointer;
+
   border: 1px solid #0dbc91;
   border-radius: 50px;
   width: 196px;

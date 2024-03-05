@@ -1,6 +1,6 @@
 import style from "./swipper.module.scss";
 import React from "react";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../context";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import img1 from "../images/checkup1.jpg";
@@ -17,15 +17,16 @@ function Swipper() {
   if (!get) {
     return <div>Загрузка текста...</div>;
   }
-  //const swiper = useSwiper();
+  const [swiper, setSwiper] = useState();
   return (
     <div className={style.con}>
       <Swiper
+        onSwiper={setSwiper}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
-        // navigation={{ nextEl: style.st, prevEl: style.st2 }}
+        //navigation
+        //navigation={{ nextEl: style.st, prevEl: style.st2 }}
         pagination={{ clickable: true, type: "fraction" }}
         //onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
@@ -67,7 +68,22 @@ function Swipper() {
         <SwiperSlide>
           <div className={style.slide}></div>
         </SwiperSlide>
+        <div className={style.st}></div>
       </Swiper>
+      <button
+        className={style.st3}
+        onClick={() => {
+          swiper.slidePrev();
+          console.log(swiper);
+        }}
+      ></button>
+      <button
+        className={style.st2}
+        onClick={() => {
+          swiper.slideNext();
+          console.log(swiper);
+        }}
+      ></button>
     </div>
   );
 }

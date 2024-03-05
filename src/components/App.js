@@ -6,7 +6,7 @@ import React from "react";
 import Swipper from "./swipper.jsx";
 import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
-
+import { register } from "swiper/element/bundle";
 function App() {
   let [Text, setText] = useState(null);
 
@@ -26,6 +26,8 @@ function App() {
   //======================================================================
   useEffect(() => {
     function fetchFile() {
+      register();
+
       setText(json);
     }
     fetchFile();

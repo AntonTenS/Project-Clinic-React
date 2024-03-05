@@ -62,7 +62,8 @@ img {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  right: var(--swiper-navigation-sides-offset, 46%);
+  //right: var(--swiper-navigation-sides-offset, 45.6%);
+  right: 45.6%;
   top: var(--swiper-navigation-top-offset, 99%);
   z-index: 11;
 }
@@ -73,7 +74,7 @@ img {
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
-  left: var(--swiper-navigation-sides-offset, 46%);
+  left: 45.6%;
   top: var(--swiper-navigation-top-offset, 99%);
   z-index: 11;
 }
