@@ -18,14 +18,13 @@ function Header() {
 
   const changeBurger = () => {
     setBurgerbool(!burgerbool);
-    console.log(burgerbool);
   };
 
   if (!get) {
     return <div>Загрузка текста...</div>;
   }
   return (
-    <div>
+    <div className={style.sticky}>
       <div className={style.conteiner}>
         <BlockHeader>
           <div className={style.mobile}>

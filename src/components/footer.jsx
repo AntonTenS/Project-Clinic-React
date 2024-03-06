@@ -28,25 +28,31 @@ export function Footer() {
                     <a href="">{get.navbar.about}</a>
                   </li>
                   <li className={style.li}>
-                    <a href="">{get.navbar.services}</a>
+                    <a href="#">{get.navbar.services}</a>
                   </li>
                   <li className={style.li}>
-                    <a href="">{get.navbar.specialists}</a>
+                    <a href="#">{get.navbar.specialists}</a>
                   </li>
                   <li className={style.li}>
-                    <a href="">{get.navbar.prices}</a>
+                    <a href="#">{get.navbar.prices}</a>
                   </li>
                   <li className={style.li}>
-                    <a href="">{get.navbar.contacts}</a>
+                    <a href="#">{get.navbar.contacts}</a>
                   </li>
                 </ul>
               </div>
             </div>
             <div className={style.right}>
               <div className={style.conimg}>
-                <img className={style.img} src={ins} alt="instagtam" />
-                <img className={style.img} src={ws} alt="wathssap" />
-                <img className={style.img} src={tl} alt="telegtam" />
+                <a href="#">
+                  <img className={style.img} src={ins} alt="instagtam" />
+                </a>
+                <a href="#">
+                  <img className={style.img} src={ws} alt="wathssap" />
+                </a>
+                <a href="#">
+                  <img className={style.img} src={tl} alt="telegtam" />
+                </a>
               </div>
             </div>
           </div>
