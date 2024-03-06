@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
 import { register } from "swiper/element/bundle";
 import { Footer } from "./footer.jsx";
+import { Form } from "./form.jsx";
 function App() {
   let [Text, setText] = useState(null);
 
@@ -36,6 +37,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={Text}>
+      <Form />
       <Header />
       <Main />
       <Faq />

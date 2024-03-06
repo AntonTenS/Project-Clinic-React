@@ -18,6 +18,11 @@ function Header() {
 
   const changeBurger = () => {
     setBurgerbool(!burgerbool);
+    if (burgerbool) {
+      document.body.style.overflow = "";
+    } else {
+      document.body.style.overflow = "hidden";
+    }
   };
 
   if (!get) {
