@@ -7,6 +7,7 @@ import Swipper from "./swipper.jsx";
 import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
 import { register } from "swiper/element/bundle";
+import { Footer } from "./footer.jsx";
 function App() {
   let [Text, setText] = useState(null);
 
@@ -39,6 +40,7 @@ function App() {
       <Main />
       <Faq />
       <Swipper />
+      <Footer />
     </AuthContext.Provider>
   );
 }
