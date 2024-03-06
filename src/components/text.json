@@ -48,6 +48,7 @@
   },
   "checkup": {
     "1": {
+      "img": "pic1",
       "title": "Check-UP",
       "subtitle": "для мужчин",
       "list": {
@@ -59,6 +60,38 @@
       "casttext": "Всего",
       "castcurrent": "2800₽",
       "castpast": "3500₽",
+      "textbuttonleft": "Записаться",
+      "textbuttonright": "Подробнее"
+    },
+    "2": {
+      "img": "pic2",
+      "title": "Check-UP",
+      "subtitle": "для женщин",
+      "list": {
+        "1": "Гормональный скрининг",
+        "2": "Эстроген",
+        "3": "Свободный Эстроген"
+      },
+      "casttext": "Всего",
+      "castcurrent": "3000₽",
+      "castpast": "5000₽",
+      "textbuttonleft": "Записаться",
+      "textbuttonright": "Подробнее"
+    },
+    "3": {
+      "img": "pic3",
+      "title": "Check-UP",
+      "subtitle": "для детей",
+      "list": {
+        "1": "Водные процедуры",
+        "2": "Грязелечение",
+        "3": "Массаж",
+        "4": "Водные процедуры",
+        "5": "Грязелечение"
+      },
+      "casttext": "Всего",
+      "castcurrent": "5000₽",
+      "castpast": "9500₽",
       "textbuttonleft": "Записаться",
       "textbuttonright": "Подробнее"
     }
