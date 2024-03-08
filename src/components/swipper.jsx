@@ -11,7 +11,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
-function Swipper() {
+function Swipper({ setFormactiv }) {
   const get = useContext(AuthContext);
 
   if (!get) {
@@ -30,12 +30,12 @@ function Swipper() {
         //navigation
         //navigation={{ nextEl: style.st, prevEl: style.st2 }}
         //pagination={{ clickable: true, type: "fraction" }}
-        //onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log("slide change")}
+        // onSwiper={(swiper) => setNumbercount(swiper.activeIndex + 1)}
+        onSlideChange={() => setNumbercount(swiper.activeIndex + 1)}
       >
         {Object.keys(get.checkup).map((key, index) => (
           <SwiperSlide key={index}>
-            <Swiperitem key={index} object={key} index={index} />
+            <Swiperitem key={index} object={key} index={index} setFormactiv={setFormactiv} />
           </SwiperSlide>
         ))}
       </Swiper>

@@ -11,8 +11,9 @@ import { ButtonHeader } from "./buttonHeader.jsx";
 import { Logomobile } from "./logomobile.jsx";
 import { HeaderMobileRightBlock } from "./headerMobileRightBlock.jsx";
 import { Navbar } from "./navbar.jsx";
+import { Form } from "./form.jsx";
 
-function Header() {
+function Header({ setFormactiv, formactiv }) {
   const get = useContext(AuthContext);
   const [burgerbool, setBurgerbool] = useState(false);
 
@@ -48,13 +49,14 @@ function Header() {
             </div>
             <div className={style.right}>
               <NumberWhatsapp />
-              <ButtonHeader />
+              <ButtonHeader setFormactiv={setFormactiv} />
             </div>
           </div>
         </BlockHeader>
       </div>
       <div className={style.reletive}>
-        <Navbar burgerbool={burgerbool} />
+        <Form formactiv={formactiv} setFormactiv={setFormactiv} />
+        <Navbar formactiv={formactiv} burgerbool={burgerbool} setFormactiv={setFormactiv} />
       </div>
     </div>
   );

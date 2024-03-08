@@ -8,10 +8,14 @@ import { useState, useEffect } from "react";
 import { AuthContext } from "../context.js";
 import { register } from "swiper/element/bundle";
 import { Footer } from "./footer.jsx";
-import { Form } from "./form.jsx";
+
 function App() {
   let [Text, setText] = useState(null);
+  const [Formactiv, setFormactiv] = useState(false);
 
+  function changeFormactiv() {
+    setFormactiv(!Formactiv);
+  }
   //=================For-JSON-API==========================================
   // useEffect(() => {
   //   async function fetchFile() {
@@ -37,11 +41,10 @@ function App() {
 
   return (
     <AuthContext.Provider value={Text}>
-      <Form />
-      <Header />
+      <Header setFormactiv={changeFormactiv} formactiv={Formactiv} />
       <Main />
       <Faq />
-      <Swipper />
+      <Swipper setFormactiv={changeFormactiv} />
       <Footer />
     </AuthContext.Provider>
   );

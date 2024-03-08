@@ -5,7 +5,7 @@ import img1 from "../images/checkup1.jpg";
 import { AuthContext } from "../context";
 import { arraypic } from "./images";
 
-export function Swiperitem({ object, index }) {
+export function Swiperitem({ object, index, setFormactiv }) {
   const get = useContext(AuthContext);
 
   if (!get) {
@@ -31,7 +31,9 @@ export function Swiperitem({ object, index }) {
             <div className={style.castpast}>{get.checkup[object].castpast}</div>
           </div>
           <div className={style.conforbuttons}>
-            <button className={style.buttonleft}>{get.checkup[object].textbuttonleft}</button>
+            <button className={style.buttonleft} onClick={setFormactiv}>
+              {get.checkup[object].textbuttonleft}
+            </button>
             <button className={style.buttonright}>{get.checkup[object].textbuttonright}</button>
           </div>
         </div>
