@@ -47,25 +47,12 @@ const config = {
         test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
-
-      // {
-      //   test: /\.(svg|jpe?g)$/,
-      //   use: "file-loader",
-      // },
-      // {
-      //   test: /\.png$/,
-      //   use: [
-      //     {
-      //       loader: "url-loader",
-      //       options: {
-      //         mimetype: "image/png",
-      //       },
-      //     },
-      //   ],
-      // },
       {
-        test: /\.(jpe?g|png|svg|gif)$/,
+        test: /\.(jpe?g|png|gif|svg|ico)$/,
         type: "asset/resource",
+        generator: {
+          filename: "assets/img/[name][ext]",
+        },
       },
     ],
   },

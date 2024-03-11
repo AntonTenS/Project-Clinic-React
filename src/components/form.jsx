@@ -13,7 +13,7 @@ export function Form({ formactiv, setFormactiv }) {
   return (
     <div className={formactiv ? style.blockgreen : style.noneblockgreen}>
       <div className={style.concenter}>
-        <form className={style.form} action="" method="">
+        <form className={style.form} action="https://formspree.io/f/mdoqdlqz" method="POST">
           <div className={style.flexblock}>
             <div className={style.blockclose}>
               <button type="button" className={style.buttonclose} onClick={setFormactiv}></button>
@@ -25,9 +25,9 @@ export function Form({ formactiv, setFormactiv }) {
                   <p className={style.textlittle}>{get.form.discription}</p>
                 </div>
                 <div className={style.right}>
-                  <input className={style.input} type="text" required placeholder={get.form.fio} />
-                  <input className={style.input} type="phone" required placeholder={get.form.number} />
-                  <input className={style.input} type="mail" required placeholder={get.form.mail} />
+                  <input className={style.input} type="text" name="Name" required placeholder={get.form.fio} />
+                  <input className={style.input} type="phone" name="Phone" required placeholder={get.form.number} />
+                  <input className={style.input} type="mail" name="Mail" required placeholder={get.form.mail} />
                   <button className={style.button} type="submit">
                     {get.form.textbutton}
                   </button>
